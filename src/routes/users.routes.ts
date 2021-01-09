@@ -21,6 +21,7 @@ usersRouter.post('/', async (request, response) => {
     password,
   });
 
+  // Com a atualização do TypeScript, isso se faz necessário
   const userWithoutPassword = {
     id: user.id,
     name: user.name,
@@ -55,5 +56,4 @@ usersRouter.patch(
     return response.json(userWithoutPassword);
   },
 );
-
 export default usersRouter;
